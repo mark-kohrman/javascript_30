@@ -14,9 +14,12 @@ function togglePlay() {
 function updateButton() {
   const icon = this.paused ? '►' : '❚ ❚';
   console.log('Update the button');
+  toggle.textContent = icon;
 }
 
 video.addEventListener('click', togglePlay);
+toggle.addEventListener('click', togglePlay)
+
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
 
