@@ -129,6 +129,14 @@
     justify-content: center;
   }
 
+  .trigger-enter .dropdown{
+    display: block;
+  }
+
+  .trigger-enter-active .dropdown{
+    opacity: 1;
+  }
+
   .dropdown {
     opacity: 0;
     position: absolute;
@@ -142,6 +150,10 @@
     display: none;
   }
 
+  .dropdownBackground.open {
+    
+  }
+  
   .trigger-enter .dropdown {
     display: block;
   }
@@ -220,6 +232,21 @@
 </style>
 
 <script>
+  const triggers = document.querySelectorAll('.cool > li');
+  const background = document.querySelector('.dropdownBackground')
+  const nav = document.querySelector('.top')
+
+  function handleEnter() {
+    this.classList.add("trigger-enter");
+    setTimeout(function() {
+      console.log(this);
+      this.classList.add("trigger-enter-active", 150);
+    })
+  }
+
+  function.handleLeave() {
+  }
+
 </script>
 
 </body>
